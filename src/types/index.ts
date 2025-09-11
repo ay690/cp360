@@ -22,8 +22,8 @@ export type FilterType = "all" | "with-data" | "without-data";
 export interface CalendarState {
   data: CalendarData;
   events: CalendarEvent[];
- 
-  
+  filteredEvents: CalendarEvent[];
+  activeFilter: FilterType;
   selectedDate: string | null;
   selectedData: UserData[] | null;
   isModalOpen: boolean;

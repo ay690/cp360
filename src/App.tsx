@@ -1,6 +1,7 @@
 import Layout from "./components/Layout/Layout";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import LazyCalendarComponent from "./components/Calendar/LazyCalendarComponent";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               visualizations.
             </p>
           </div>
+          <LazyCalendarComponent />
         </div>
       </Layout>
     </Provider>
