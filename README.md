@@ -1,69 +1,70 @@
-# React + TypeScript + Vite
+# React Calendar Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive React application featuring an interactive calendar with data visualization capabilities. Built with modern technologies including React 19+, TypeScript, Redux Toolkit, and Recharts.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Calendar**: Full-featured calendar with day, week, and month views
+- **Smart Filtering**: Filter calendar by dates with data, without data, or view all
+- **Lazy Loading**: Optimized performance with lazy-loaded components
+- **Data Visualization**: Dynamic bar charts displaying user-wise data for selected dates
+- **State Management**: Centralized state management using Redux Toolkit
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices
+- **Type Safety**: Full TypeScript support with strict type checking
+- **Modern UI**: Clean, professional design with smooth animations and transitions
 
-## Expanding the ESLint configuration
+## 🛠 Technology Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend Framework**: React 19+ with TypeScript
+- **Build Tool**: Vite
+- **State Management**: Redux Toolkit with React-Redux
+- **Calendar Component**: React Big Calendar
+- **Data Visualization**: Recharts
+- **Styling**: Tailwind CSS
+- **Date Handling**: Moment.js
+- **Icons**: Lucide React
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installing Node.js 16+
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+If you need to install or upgrade Node.js:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Using Node Version Manager (nvm) - Recommended:**
+   ```bash
+   # Install nvm (if not already installed)
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+   
+   # Install and use Node.js 16+
+   nvm install 16
+   nvm use 16
+   ```
+
+2. **Direct Download:**
+   - Visit [nodejs.org](https://nodejs.org/)
+   - Download the LTS version (16.x or higher)
+   - Follow the installation instructions for your operating system
+
+
+## 🚦 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ay690/cp360.git
+cd cp360
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+**Note**: This project uses React 19+ and requires Node.js 16+. If you encounter any dependency issues, ensure your Node.js version meets the requirements.
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+```
+
+The application will start on `http://localhost:5173` by default.
