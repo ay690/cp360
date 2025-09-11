@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { mockCalendarData } from '../../data/mockData';
 import { parseDateFromDDMMYYYY, getDateKey } from '../../utils/dateUtils';
@@ -27,7 +26,7 @@ const createEventsFromData = (data: CalendarData): CalendarEvent[] => {
   return events;
 };
 
-const filterEventsByType = (events: CalendarEvent[], filterType: FilterType, data: CalendarData): CalendarEvent[] => {
+const filterEventsByType = (events: CalendarEvent[], filterType: FilterType): CalendarEvent[] => {
   if (filterType === 'all') return events;
   
   return events.filter(event => {
@@ -64,7 +63,7 @@ const calendarSlice = createSlice({
 
      setFilter: (state, action: PayloadAction<FilterType>) => {
       state.activeFilter = action.payload;
-      state.filteredEvents = filterEventsByType(state.events, action.payload, state.data);
+      state.filteredEvents = filterEventsByType(state.events, action.payload);
       state.error = null;
     },
 
