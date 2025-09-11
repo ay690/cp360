@@ -20,6 +20,9 @@ const CalendarComponent: React.FC = () => {
   const { events, filteredEvents, data, activeFilter } = useAppSelector(
     (state) => state.calendar
   );
+
+  // console.log(events);
+
   const [currentDate, setCurrentDate] = useState(new Date());
   const [currentView, setCurrentView] = useState<View>("month");
   const handleNavigate = (date: Date, view?: View) => {
